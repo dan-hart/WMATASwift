@@ -35,6 +35,10 @@ public struct Train: Codable, Hashable {
     }
 }
 
+extension Train {
+    public static let preview = Train(car: "6", destination: "Largo", destinationCode: "123", destinationName: "Largo Town Center", group: "2", line: .bl, locationCode: "456", locationName: "Location", min: "21")
+}
+
 // MARK: Train convenience initializers and mutators
 
 extension Train {

@@ -15,7 +15,7 @@
 import Foundation
 
 // MARK: - Address
-public struct Address: Codable {
+public struct Address: Codable, Hashable {
     public let street, city, state, zip: String?
 
     enum CodingKeys: String, CodingKey {

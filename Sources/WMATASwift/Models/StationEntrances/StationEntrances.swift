@@ -17,7 +17,7 @@ import Foundation
 // MARK: - StationEntrances
 
 /// https://api.wmata.com/Rail.svc/json/jStationEntrances?Lat=38.8978168&Lon=-77.0404246&Radius=500
-public struct StationEntrances: Codable {
+public struct StationEntrances: Codable, Hashable {
     public let entrances: [Entrance]?
 
     enum CodingKeys: String, CodingKey {

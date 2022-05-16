@@ -1,5 +1,5 @@
 import Foundation
 
-enum DestinationStation: String, Codable {
+public enum DestinationStation: String, Codable {
     case f11 = "F11"
 }

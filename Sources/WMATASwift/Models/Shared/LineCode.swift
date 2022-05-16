@@ -3,7 +3,7 @@ import Foundation
 import SwiftUI
 #endif
 
-enum LineCode: String, Codable {
+public enum LineCode: String, Codable {
     case bl = "BL"
     case gr = "GR"
     case or = "OR"

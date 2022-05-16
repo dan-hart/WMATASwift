@@ -15,7 +15,7 @@
 import Foundation
 
 // MARK: - StationTime
-public struct StationTime: Codable {
+public struct StationTime: Codable, Hashable {
     public let code, stationName: String?
     public let monday, tuesday, wednesday, thursday: Day?
     public let friday, saturday, sunday: Day?

@@ -15,7 +15,7 @@
 import Foundation
 
 // MARK: - ElevatorIncident
-public struct ElevatorIncident: Codable {
+public struct ElevatorIncident: Codable, Hashable {
     public let unitName: String?
     public let unitType: UnitType?
     public let unitStatus: JSONNull?

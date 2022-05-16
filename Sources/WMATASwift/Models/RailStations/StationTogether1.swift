@@ -1,6 +1,6 @@
 import Foundation
 
-enum StationTogether1: String, Codable {
+public enum StationTogether1: String, Codable {
     case a01 = "A01"
     case b01 = "B01"
     case b06 = "B06"

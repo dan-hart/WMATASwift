@@ -17,7 +17,7 @@ import Foundation
 // MARK: - ParkingInformation
 
 /// https://api.wmata.com/Rail.svc/json/jStationParking
-public struct ParkingInformation: Codable {
+public struct ParkingInformation: Codable, Hashable {
     public let stationsParking: [StationsParking]?
 
     enum CodingKeys: String, CodingKey {

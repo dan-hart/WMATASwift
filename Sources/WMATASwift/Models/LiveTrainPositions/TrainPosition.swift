@@ -15,7 +15,7 @@
 import Foundation
 
 // MARK: - TrainPosition
-public struct TrainPosition: Codable {
+public struct TrainPosition: Codable, Hashable {
     public let trainID, trainNumber: String?
     public let carCount, directionNum, circuitID: Int?
     public let destinationStationCode: String?

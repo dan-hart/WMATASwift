@@ -15,7 +15,7 @@
 import Foundation
 
 // MARK: - Path
-public struct Path: Codable {
+public struct Path: Codable, Hashable {
     public let lineCode: LineCode?
     public let stationCode, stationName: String?
     public let seqNum, distanceToPrev: Int?

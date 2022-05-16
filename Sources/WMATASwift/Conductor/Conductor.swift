@@ -15,10 +15,10 @@ public class Conductor: Conducting {
     var session = URLSession.shared
     var cacheResponseData = true
     var cache = Cache<String, Data>(entryLifetime: 60, useLocalDisk: true)
-    var apiKey: String?
+    public var apiKey: String?
     
     // MARK: - Functions
-    func validate() async throws -> Bool {
+    public func validate() async throws -> Bool {
         let data = try await request(Endpoints.validate)
         guard let dataAsString = String(data: data, encoding: .utf8) else {
             return false
@@ -30,18 +30,18 @@ public class Conductor: Conducting {
         }
     }
     
-    func railStations() async throws -> [Station] {
+    public func railStations() async throws -> [Station] {
         let data = try await request(Endpoints.railStations)
         return try RailStations(data: data).stations ?? []
     }
     
-    func nextTrains(atStation code: String) async throws -> [Train] {
+    public func nextTrains(atStation code: String) async throws -> [Train] {
         let data = try await request(Endpoints.nextTrains(atStation: code))
         return try NextTrains(data: data).trains ?? []
     }
     
     // MARK: - Request
-    func request(_ endpoint: Endpoint) async throws -> Data {
+    public func request(_ endpoint: Endpoint) async throws -> Data {
         guard let url = endpoint.url else {
             throw WMATASwiftError.invalidURL
         }

@@ -17,7 +17,7 @@ import Foundation
 // MARK: - RailIncidents
 
 /// https://api.wmata.com/Incidents.svc/json/Incidents
-public struct RailIncidents: Codable {
+public struct RailIncidents: Codable, Hashable {
     public let incidents: [Incident]?
 
     enum CodingKeys: String, CodingKey {

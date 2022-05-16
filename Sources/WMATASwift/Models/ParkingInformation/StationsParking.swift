@@ -15,7 +15,7 @@
 import Foundation
 
 // MARK: - StationsParking
-public struct StationsParking: Codable {
+public struct StationsParking: Codable, Hashable {
     public let code: String?
     public let notes: String?
     public let allDayParking: AllDayParking?

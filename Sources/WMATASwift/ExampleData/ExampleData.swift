@@ -1742,4 +1742,824 @@ class ExampleData {
       }]
     }
     """
+    
+    static let stationTimesJSON = """
+    {
+      "StationTimes": [{
+        "Code": "E10",
+        "StationName": "Greenbelt",
+        "Monday": {
+          "OpeningTime": "04:50",
+          "FirstTrains": [{
+            "Time": "05:00",
+            "DestinationStation": "F11"
+          }],
+          "LastTrains": [{
+            "Time": "23:27",
+            "DestinationStation": "F11"
+          }]
+        },
+        "Tuesday": {
+          "OpeningTime": "04:50",
+          "FirstTrains": [{
+            "Time": "05:00",
+            "DestinationStation": "F11"
+          }],
+          "LastTrains": [{
+            "Time": "23:27",
+            "DestinationStation": "F11"
+          }]
+        },
+        "Wednesday": {
+          "OpeningTime": "04:50",
+          "FirstTrains": [{
+            "Time": "05:00",
+            "DestinationStation": "F11"
+          }],
+          "LastTrains": [{
+            "Time": "23:27",
+            "DestinationStation": "F11"
+          }]
+        },
+        "Thursday": {
+          "OpeningTime": "04:50",
+          "FirstTrains": [{
+            "Time": "05:00",
+            "DestinationStation": "F11"
+          }],
+          "LastTrains": [{
+            "Time": "23:27",
+            "DestinationStation": "F11"
+          }]
+        },
+        "Friday": {
+          "OpeningTime": "04:50",
+          "FirstTrains": [{
+            "Time": "05:00",
+            "DestinationStation": "F11"
+          }],
+          "LastTrains": [{
+            "Time": "00:27",
+            "DestinationStation": "F11"
+          }]
+        },
+        "Saturday": {
+          "OpeningTime": "06:50",
+          "FirstTrains": [{
+            "Time": "07:00",
+            "DestinationStation": "F11"
+          }],
+          "LastTrains": [{
+            "Time": "00:27",
+            "DestinationStation": "F11"
+          }]
+        },
+        "Sunday": {
+          "OpeningTime": "07:50",
+          "FirstTrains": [{
+            "Time": "07:00",
+            "DestinationStation": "F11"
+          }],
+          "LastTrains": [{
+            "Time": "23:27",
+            "DestinationStation": "F11"
+          }]
+        }
+      }]
+    }
+    """
+    
+    static let elevatorIncidentsJSON = """
+    {
+      "ElevatorIncidents": [{
+        "UnitName": "A01E02",
+        "UnitType": "ESCALATOR",
+        "UnitStatus": null,
+        "StationCode": "A01",
+        "StationName": "Metro Center, G and 11th St Entrance",
+        "LocationDescription": "Escalator between street and mezzanine",
+        "SymptomCode": null,
+        "TimeOutOfService": "0427",
+        "SymptomDescription": "Modernization",
+        "DisplayOrder": 0.0,
+        "DateOutOfServ": "2022-05-09T04:27:00",
+        "DateUpdated": "2022-05-10T11:26:51",
+        "EstimatedReturnToService": "2022-08-19T23:59:59"
+      }, {
+        "UnitName": "A03N01",
+        "UnitType": "ESCALATOR",
+        "UnitStatus": null,
+        "StationCode": "A03",
+        "StationName": "Dupont Circle, Q Street Entrance",
+        "LocationDescription": "Escalator between street and mezzanine",
+        "SymptomCode": null,
+        "TimeOutOfService": "0817",
+        "SymptomDescription": "Minor Repair",
+        "DisplayOrder": 0.0,
+        "DateOutOfServ": "2022-05-14T08:17:00",
+        "DateUpdated": "2022-05-16T06:24:48",
+        "EstimatedReturnToService": "2022-05-16T23:59:59"
+      }, {
+        "UnitName": "A07X01",
+        "UnitType": "ESCALATOR",
+        "UnitStatus": null,
+        "StationCode": "A07",
+        "StationName": "Tenleytown-AU",
+        "LocationDescription": "Escalator between street and middle landing, east side of Wisconsin Avenue",
+        "SymptomCode": null,
+        "TimeOutOfService": "0402",
+        "SymptomDescription": "Modernization",
+        "DisplayOrder": 0.0,
+        "DateOutOfServ": "2021-08-30T04:02:00",
+        "DateUpdated": "2022-05-05T11:18:51",
+        "EstimatedReturnToService": "2023-07-31T23:59:59"
+      }, {
+        "UnitName": "A07X02",
+        "UnitType": "ESCALATOR",
+        "UnitStatus": null,
+        "StationCode": "A07",
+        "StationName": "Tenleytown-AU",
+        "LocationDescription": "Escalator between street and middle landing, east side of Wisconsin Avenue",
+        "SymptomCode": null,
+        "TimeOutOfService": "0404",
+        "SymptomDescription": "Modernization",
+        "DisplayOrder": 0.0,
+        "DateOutOfServ": "2021-08-30T04:04:00",
+        "DateUpdated": "2022-05-05T11:27:57",
+        "EstimatedReturnToService": "2023-07-31T23:59:59"
+      }, {
+        "UnitName": "A07X05",
+        "UnitType": "ESCALATOR",
+        "UnitStatus": null,
+        "StationCode": "A07",
+        "StationName": "Tenleytown-AU",
+        "LocationDescription": "Escalator between middle landing and mezzanine",
+        "SymptomCode": null,
+        "TimeOutOfService": "0421",
+        "SymptomDescription": "Modernization",
+        "DisplayOrder": 0.0,
+        "DateOutOfServ": "2022-04-08T04:21:00",
+        "DateUpdated": "2022-04-19T09:47:11",
+        "EstimatedReturnToService": "2022-09-26T23:59:59"
+      }, {
+        "UnitName": "A07X07",
+        "UnitType": "ESCALATOR",
+        "UnitStatus": null,
+        "StationCode": "A07",
+        "StationName": "Tenleytown-AU",
+        "LocationDescription": "Escalator between middle landing and mezzanine",
+        "SymptomCode": null,
+        "TimeOutOfService": "1546",
+        "SymptomDescription": "Other",
+        "DisplayOrder": 0.0,
+        "DateOutOfServ": "2022-05-10T15:46:00",
+        "DateUpdated": "2022-05-16T06:13:34",
+        "EstimatedReturnToService": "2022-05-17T23:59:59"
+      }, {
+        "UnitName": "A12X02",
+        "UnitType": "ESCALATOR",
+        "UnitStatus": null,
+        "StationCode": "A12",
+        "StationName": "White Flint",
+        "LocationDescription": "Escalator between station entrance and pedestrian tunnel",
+        "SymptomCode": null,
+        "TimeOutOfService": "0620",
+        "SymptomDescription": "Preventive Maintenance Inspection",
+        "DisplayOrder": 0.0,
+        "DateOutOfServ": "2022-05-16T06:20:00",
+        "DateUpdated": "2022-05-16T06:22:49",
+        "EstimatedReturnToService": "2022-05-18T23:59:59"
+      }, {
+        "UnitName": "B02S04",
+        "UnitType": "ESCALATOR",
+        "UnitStatus": null,
+        "StationCode": "B02",
+        "StationName": "Judiciary Square, 4th St/Courthouse Entrance",
+        "LocationDescription": "Escalator between mezzanine and platform to Shady Grove",
+        "SymptomCode": null,
+        "TimeOutOfService": "0546",
+        "SymptomDescription": "Service Call",
+        "DisplayOrder": 0.0,
+        "DateOutOfServ": "2022-05-16T05:46:00",
+        "DateUpdated": "2022-05-16T05:46:50",
+        "EstimatedReturnToService": "2022-05-18T23:59:59"
+      }, {
+        "UnitName": "B03S04",
+        "UnitType": "ESCALATOR",
+        "UnitStatus": null,
+        "StationCode": "B03",
+        "StationName": "Union Station, Massachusetts Ave. Entrance to Union Station Shops",
+        "LocationDescription": "Escalator between street and mezzanine",
+        "SymptomCode": null,
+        "TimeOutOfService": "1031",
+        "SymptomDescription": "Service Call",
+        "DisplayOrder": 0.0,
+        "DateOutOfServ": "2022-05-16T10:31:00",
+        "DateUpdated": "2022-05-16T10:32:13",
+        "EstimatedReturnToService": "2022-05-18T23:59:59"
+      }, {
+        "UnitName": "E06X06",
+        "UnitType": "ESCALATOR",
+        "UnitStatus": null,
+        "StationCode": "B06",
+        "StationName": "Fort Totten",
+        "LocationDescription": "Escalator between mezzanine and lower platform for Green Line",
+        "SymptomCode": null,
+        "TimeOutOfService": "2002",
+        "SymptomDescription": "Water Leak/Intrusion",
+        "DisplayOrder": 0.0,
+        "DateOutOfServ": "2022-05-15T20:02:00",
+        "DateUpdated": "2022-05-15T22:17:42",
+        "EstimatedReturnToService": "2022-05-17T23:59:59"
+      }, {
+        "UnitName": "B07X01",
+        "UnitType": "ESCALATOR",
+        "UnitStatus": null,
+        "StationCode": "B07",
+        "StationName": "Takoma",
+        "LocationDescription": "Escalator between mezzanine and platform",
+        "SymptomCode": null,
+        "TimeOutOfService": "0655",
+        "SymptomDescription": "Modernization",
+        "DisplayOrder": 0.0,
+        "DateOutOfServ": "2022-04-04T06:55:00",
+        "DateUpdated": "2022-05-09T00:00:19",
+        "EstimatedReturnToService": "2022-07-25T23:59:59"
+      }, {
+        "UnitName": "B09X04",
+        "UnitType": "ELEVATOR",
+        "UnitStatus": null,
+        "StationCode": "B09",
+        "StationName": "Forest Glen",
+        "LocationDescription": "Elevator between mezzanine and platform",
+        "SymptomCode": null,
+        "TimeOutOfService": "0203",
+        "SymptomDescription": "Modernization",
+        "DisplayOrder": 0.0,
+        "DateOutOfServ": "2022-03-08T02:03:00",
+        "DateUpdated": "2022-03-08T10:04:46",
+        "EstimatedReturnToService": "2022-08-09T23:59:59"
+      }, {
+        "UnitName": "B09X05",
+        "UnitType": "ELEVATOR",
+        "UnitStatus": null,
+        "StationCode": "B09",
+        "StationName": "Forest Glen",
+        "LocationDescription": "Elevator between mezzanine and platform",
+        "SymptomCode": null,
+        "TimeOutOfService": "0200",
+        "SymptomDescription": "Modernization",
+        "DisplayOrder": 0.0,
+        "DateOutOfServ": "2022-03-08T02:00:00",
+        "DateUpdated": "2022-03-08T10:05:10",
+        "EstimatedReturnToService": "2022-08-09T23:59:59"
+      }, {
+        "UnitName": "B09X06",
+        "UnitType": "ELEVATOR",
+        "UnitStatus": null,
+        "StationCode": "B09",
+        "StationName": "Forest Glen",
+        "LocationDescription": "Elevator between mezzanine and platform",
+        "SymptomCode": null,
+        "TimeOutOfService": "0201",
+        "SymptomDescription": "Modernization",
+        "DisplayOrder": 0.0,
+        "DateOutOfServ": "2022-03-08T02:01:00",
+        "DateUpdated": "2022-03-08T10:05:26",
+        "EstimatedReturnToService": "2022-08-09T23:59:59"
+      }, {
+        "UnitName": "B10X01",
+        "UnitType": "ESCALATOR",
+        "UnitStatus": null,
+        "StationCode": "B10",
+        "StationName": "Wheaton",
+        "LocationDescription": "Escalator between mezzanine and platform",
+        "SymptomCode": null,
+        "TimeOutOfService": "1220",
+        "SymptomDescription": "Major Repair",
+        "DisplayOrder": 0.0,
+        "DateOutOfServ": "2022-05-09T12:20:00",
+        "DateUpdated": "2022-05-14T16:01:01",
+        "EstimatedReturnToService": "2022-05-16T23:59:59"
+      }, {
+        "UnitName": "C01N05",
+        "UnitType": "ESCALATOR",
+        "UnitStatus": null,
+        "StationCode": "C01",
+        "StationName": "Metro Center, G and 12th St Entrance",
+        "LocationDescription": "Escalator between upper and lower platforms",
+        "SymptomCode": null,
+        "TimeOutOfService": "0534",
+        "SymptomDescription": "Service Call",
+        "DisplayOrder": 0.0,
+        "DateOutOfServ": "2022-05-16T05:34:00",
+        "DateUpdated": "2022-05-16T10:03:18",
+        "EstimatedReturnToService": "2022-05-18T23:59:59"
+      }, {
+        "UnitName": "C07E14",
+        "UnitType": "ESCALATOR",
+        "UnitStatus": null,
+        "StationCode": "C07",
+        "StationName": "Pentagon",
+        "LocationDescription": "Escalator between the lower bus platform and the upper platform",
+        "SymptomCode": null,
+        "TimeOutOfService": "0246",
+        "SymptomDescription": "Minor Repair",
+        "DisplayOrder": 0.0,
+        "DateOutOfServ": "2022-05-16T02:46:00",
+        "DateUpdated": "2022-05-16T02:49:28",
+        "EstimatedReturnToService": "2022-05-18T23:59:59"
+      }, {
+        "UnitName": "C12X01",
+        "UnitType": "ESCALATOR",
+        "UnitStatus": null,
+        "StationCode": "C12",
+        "StationName": "Braddock Road",
+        "LocationDescription": "Escalator between mezzanine and platform",
+        "SymptomCode": null,
+        "TimeOutOfService": "0248",
+        "SymptomDescription": "Modernization",
+        "DisplayOrder": 0.0,
+        "DateOutOfServ": "2022-03-21T02:48:00",
+        "DateUpdated": "2022-04-12T08:56:25",
+        "EstimatedReturnToService": "2022-09-05T23:59:59"
+      }, {
+        "UnitName": "C12X02",
+        "UnitType": "ESCALATOR",
+        "UnitStatus": null,
+        "StationCode": "C12",
+        "StationName": "Braddock Road",
+        "LocationDescription": "Escalator between mezzanine and platform",
+        "SymptomCode": null,
+        "TimeOutOfService": "0723",
+        "SymptomDescription": "Walker",
+        "DisplayOrder": 0.0,
+        "DateOutOfServ": "2022-03-22T07:23:00",
+        "DateUpdated": "2022-04-12T08:56:51",
+        "EstimatedReturnToService": "2022-09-05T23:59:59"
+      }, {
+        "UnitName": "C14X01",
+        "UnitType": "ESCALATOR",
+        "UnitStatus": null,
+        "StationCode": "C14",
+        "StationName": "Eisenhower Avenue",
+        "LocationDescription": "Escalator between mezzanine and platform to Mt. Vernon Sq",
+        "SymptomCode": null,
+        "TimeOutOfService": "0618",
+        "SymptomDescription": "Modernization",
+        "DisplayOrder": 0.0,
+        "DateOutOfServ": "2022-05-02T06:18:00",
+        "DateUpdated": "2022-05-05T09:40:47",
+        "EstimatedReturnToService": "2022-07-25T23:59:59"
+      }, {
+        "UnitName": "D02N04",
+        "UnitType": "ESCALATOR",
+        "UnitStatus": null,
+        "StationCode": "D02",
+        "StationName": "Smithsonian, The Mall Entrance",
+        "LocationDescription": "Escalator between mezzanine and platform to Vienna/Franconia-Springfield",
+        "SymptomCode": null,
+        "TimeOutOfService": "0418",
+        "SymptomDescription": "Minor Repair",
+        "DisplayOrder": 0.0,
+        "DateOutOfServ": "2022-05-16T04:18:00",
+        "DateUpdated": "2022-05-16T09:54:20",
+        "EstimatedReturnToService": "2022-05-18T23:59:59"
+      }, {
+        "UnitName": "D02S07",
+        "UnitType": "ESCALATOR",
+        "UnitStatus": null,
+        "StationCode": "D02",
+        "StationName": "Smithsonian, Independence Avenue Entrance",
+        "LocationDescription": "Escalator between mezzanine and platform to Vienna/Franconia-Springfield",
+        "SymptomCode": null,
+        "TimeOutOfService": "2236",
+        "SymptomDescription": "Other",
+        "DisplayOrder": 0.0,
+        "DateOutOfServ": "2022-05-15T22:36:00",
+        "DateUpdated": "2022-05-16T09:51:18",
+        "EstimatedReturnToService": "2022-05-17T23:59:59"
+      }, {
+        "UnitName": "D05X01",
+        "UnitType": "ELEVATOR",
+        "UnitStatus": null,
+        "StationCode": "D05",
+        "StationName": "Capitol South",
+        "LocationDescription": "Elevator between street and mezzanine",
+        "SymptomCode": null,
+        "TimeOutOfService": "1020",
+        "SymptomDescription": "Service Call",
+        "DisplayOrder": 0.0,
+        "DateOutOfServ": "2022-05-16T10:20:00",
+        "DateUpdated": "2022-05-16T10:21:34",
+        "EstimatedReturnToService": "2022-05-18T23:59:59"
+      }, {
+        "UnitName": "D05X03",
+        "UnitType": "ESCALATOR",
+        "UnitStatus": null,
+        "StationCode": "D05",
+        "StationName": "Capitol South",
+        "LocationDescription": "Escalator between street and mezzanine",
+        "SymptomCode": null,
+        "TimeOutOfService": "0115",
+        "SymptomDescription": "Modernization",
+        "DisplayOrder": 0.0,
+        "DateOutOfServ": "2022-03-21T01:15:00",
+        "DateUpdated": "2022-04-25T05:25:03",
+        "EstimatedReturnToService": "2022-07-08T23:59:59"
+      }, {
+        "UnitName": "D07X01",
+        "UnitType": "ESCALATOR",
+        "UnitStatus": null,
+        "StationCode": "D07",
+        "StationName": "Potomac Ave",
+        "LocationDescription": "Escalator between street and mezzanine",
+        "SymptomCode": null,
+        "TimeOutOfService": "1957",
+        "SymptomDescription": "Major Repair",
+        "DisplayOrder": 0.0,
+        "DateOutOfServ": "2022-05-09T19:57:00",
+        "DateUpdated": "2022-05-12T23:33:52",
+        "EstimatedReturnToService": "2022-05-16T23:59:59"
+      }, {
+        "UnitName": "D07X05",
+        "UnitType": "ESCALATOR",
+        "UnitStatus": null,
+        "StationCode": "D07",
+        "StationName": "Potomac Ave",
+        "LocationDescription": "Escalator between mezzanine and platform",
+        "SymptomCode": null,
+        "TimeOutOfService": "1012",
+        "SymptomDescription": "Inspection Repair",
+        "DisplayOrder": 0.0,
+        "DateOutOfServ": "2022-05-15T10:12:00",
+        "DateUpdated": "2022-05-15T10:13:45",
+        "EstimatedReturnToService": "2022-05-17T23:59:59"
+      }, {
+        "UnitName": "D07X06",
+        "UnitType": "ESCALATOR",
+        "UnitStatus": null,
+        "StationCode": "D07",
+        "StationName": "Potomac Ave",
+        "LocationDescription": "Escalator between mezzanine and platform",
+        "SymptomCode": null,
+        "TimeOutOfService": "1037",
+        "SymptomDescription": "Service Call",
+        "DisplayOrder": 0.0,
+        "DateOutOfServ": "2022-05-15T10:37:00",
+        "DateUpdated": "2022-05-16T07:38:44",
+        "EstimatedReturnToService": "2022-05-17T23:59:59"
+      }, {
+        "UnitName": "D09X01",
+        "UnitType": "ESCALATOR",
+        "UnitStatus": null,
+        "StationCode": "D09",
+        "StationName": "Minnesota Ave",
+        "LocationDescription": "Escalator between street and mezzanine",
+        "SymptomCode": null,
+        "TimeOutOfService": "1948",
+        "SymptomDescription": "Minor Repair",
+        "DisplayOrder": 0.0,
+        "DateOutOfServ": "2022-05-13T19:48:00",
+        "DateUpdated": "2022-05-16T09:55:27",
+        "EstimatedReturnToService": "2022-05-15T23:59:59"
+      }, {
+        "UnitName": "D11X01",
+        "UnitType": "ESCALATOR",
+        "UnitStatus": null,
+        "StationCode": "D11",
+        "StationName": "Cheverly",
+        "LocationDescription": "Escalator between street and mezzanine",
+        "SymptomCode": null,
+        "TimeOutOfService": "0506",
+        "SymptomDescription": "Major Repair",
+        "DisplayOrder": 0.0,
+        "DateOutOfServ": "2022-05-16T05:06:00",
+        "DateUpdated": "2022-05-16T07:50:21",
+        "EstimatedReturnToService": "2022-05-18T23:59:59"
+      }, {
+        "UnitName": "D12X02",
+        "UnitType": "ESCALATOR",
+        "UnitStatus": null,
+        "StationCode": "D12",
+        "StationName": "Landover",
+        "LocationDescription": "Escalator between mezzanine and platform",
+        "SymptomCode": null,
+        "TimeOutOfService": "0520",
+        "SymptomDescription": "Minor Repair",
+        "DisplayOrder": 0.0,
+        "DateOutOfServ": "2022-05-09T05:20:00",
+        "DateUpdated": "2022-05-13T19:50:22",
+        "EstimatedReturnToService": "2022-05-16T23:59:59"
+      }, {
+        "UnitName": "E02N03",
+        "UnitType": "ESCALATOR",
+        "UnitStatus": null,
+        "StationCode": "E02",
+        "StationName": "Shaw-Howard U, 7th and S St. N.W. Entrance",
+        "LocationDescription": "Escalator between mezzanine and platform",
+        "SymptomCode": null,
+        "TimeOutOfService": "0459",
+        "SymptomDescription": "Modernization",
+        "DisplayOrder": 0.0,
+        "DateOutOfServ": "2022-02-22T04:59:00",
+        "DateUpdated": "2022-02-23T11:33:16",
+        "EstimatedReturnToService": "2022-08-12T23:59:59"
+      }, {
+        "UnitName": "E02N04",
+        "UnitType": "ESCALATOR",
+        "UnitStatus": null,
+        "StationCode": "E02",
+        "StationName": "Shaw-Howard U, 7th and S St. N.W. Entrance",
+        "LocationDescription": "Escalator between mezzanine and platform",
+        "SymptomCode": null,
+        "TimeOutOfService": "0502",
+        "SymptomDescription": "Walker",
+        "DisplayOrder": 0.0,
+        "DateOutOfServ": "2022-02-22T05:02:00",
+        "DateUpdated": "2022-02-28T01:53:53",
+        "EstimatedReturnToService": "2022-08-12T23:59:59"
+      }, {
+        "UnitName": "E03E03",
+        "UnitType": "ESCALATOR",
+        "UnitStatus": null,
+        "StationCode": "E03",
+        "StationName": "U Street/African-Amer Civil War Memorial/Cardozo, Vermont Avenue Entrance",
+        "LocationDescription": "Escalator between mezzanine and platform",
+        "SymptomCode": null,
+        "TimeOutOfService": "0414",
+        "SymptomDescription": "Walker",
+        "DisplayOrder": 0.0,
+        "DateOutOfServ": "2022-02-21T04:14:00",
+        "DateUpdated": "2022-04-09T21:55:44",
+        "EstimatedReturnToService": "2022-08-11T23:59:59"
+      }, {
+        "UnitName": "E03E04",
+        "UnitType": "ESCALATOR",
+        "UnitStatus": null,
+        "StationCode": "E03",
+        "StationName": "U Street/African-Amer Civil War Memorial/Cardozo, Vermont Avenue Entrance",
+        "LocationDescription": "Escalator between mezzanine and platform",
+        "SymptomCode": null,
+        "TimeOutOfService": "0240",
+        "SymptomDescription": "Modernization",
+        "DisplayOrder": 0.0,
+        "DateOutOfServ": "2022-02-21T02:40:00",
+        "DateUpdated": "2022-03-15T10:07:56",
+        "EstimatedReturnToService": "2022-08-11T23:59:59"
+      }, {
+        "UnitName": "F01N01",
+        "UnitType": "ESCALATOR",
+        "UnitStatus": null,
+        "StationCode": "F01",
+        "StationName": "Gallery Pl-Chinatown, 7th and H Street/Chinatown Entrance",
+        "LocationDescription": "Escalator between street and middle landing",
+        "SymptomCode": null,
+        "TimeOutOfService": "0830",
+        "SymptomDescription": "Minor Repair",
+        "DisplayOrder": 0.0,
+        "DateOutOfServ": "2022-05-16T08:30:00",
+        "DateUpdated": "2022-05-16T10:31:01",
+        "EstimatedReturnToService": "2022-05-18T23:59:59"
+      }, {
+        "UnitName": "F01N02",
+        "UnitType": "ESCALATOR",
+        "UnitStatus": null,
+        "StationCode": "F01",
+        "StationName": "Gallery Pl-Chinatown, 7th and H Street/Chinatown Entrance",
+        "LocationDescription": "Escalator between street and middle landing",
+        "SymptomCode": null,
+        "TimeOutOfService": "1507",
+        "SymptomDescription": "Modernization",
+        "DisplayOrder": 0.0,
+        "DateOutOfServ": "2022-05-10T15:07:00",
+        "DateUpdated": "2022-05-12T10:27:46",
+        "EstimatedReturnToService": "2022-09-10T23:59:59"
+      }, {
+        "UnitName": "F01N14",
+        "UnitType": "ESCALATOR",
+        "UnitStatus": null,
+        "StationCode": "F01",
+        "StationName": "Gallery Pl-Chinatown, 7th and H Street/Chinatown Entrance",
+        "LocationDescription": "Escalator between upper platform to Glenmont and the lower platform for Yellow/Green Line",
+        "SymptomCode": null,
+        "TimeOutOfService": "0937",
+        "SymptomDescription": "Service Call",
+        "DisplayOrder": 0.0,
+        "DateOutOfServ": "2022-05-16T09:37:00",
+        "DateUpdated": "2022-05-16T10:39:34",
+        "EstimatedReturnToService": "2022-05-18T23:59:59"
+      }, {
+        "UnitName": "F03N01",
+        "UnitType": "ESCALATOR",
+        "UnitStatus": null,
+        "StationCode": "F03",
+        "StationName": "L'Enfant Plaza, 7th St/Maryland Ave./Smithsonian Museums Entrance/VRE trains",
+        "LocationDescription": "Escalator between street and mezzanine",
+        "SymptomCode": null,
+        "TimeOutOfService": "2125",
+        "SymptomDescription": "Modernization",
+        "DisplayOrder": 0.0,
+        "DateOutOfServ": "2022-05-08T21:25:00",
+        "DateUpdated": "2022-05-12T10:25:25",
+        "EstimatedReturnToService": "2022-11-04T23:59:59"
+      }, {
+        "UnitName": "F03N02",
+        "UnitType": "ESCALATOR",
+        "UnitStatus": null,
+        "StationCode": "F03",
+        "StationName": "L'Enfant Plaza, 7th St/Maryland Ave./Smithsonian Museums Entrance/VRE trains",
+        "LocationDescription": "Escalator between street and mezzanine",
+        "SymptomCode": null,
+        "TimeOutOfService": "0528",
+        "SymptomDescription": "Modernization",
+        "DisplayOrder": 0.0,
+        "DateOutOfServ": "2022-05-09T05:28:00",
+        "DateUpdated": "2022-05-09T05:30:14",
+        "EstimatedReturnToService": "2022-11-04T23:59:59"
+      }, {
+        "UnitName": "F03N03",
+        "UnitType": "ESCALATOR",
+        "UnitStatus": null,
+        "StationCode": "F03",
+        "StationName": "L'Enfant Plaza, 7th St/Maryland Ave./Smithsonian Museums Entrance/VRE trains",
+        "LocationDescription": "Escalator between street and mezzanine",
+        "SymptomCode": null,
+        "TimeOutOfService": "1543",
+        "SymptomDescription": "Modernization",
+        "DisplayOrder": 0.0,
+        "DateOutOfServ": "2022-05-10T15:43:00",
+        "DateUpdated": "2022-05-10T15:45:24",
+        "EstimatedReturnToService": "2022-11-04T23:59:59"
+      }, {
+        "UnitName": "F05E04",
+        "UnitType": "ESCALATOR",
+        "UnitStatus": null,
+        "StationCode": "F05",
+        "StationName": "Navy Yard-Ballpark, Navy Yard Entrance",
+        "LocationDescription": "Escalator between mezzanine and platform",
+        "SymptomCode": null,
+        "TimeOutOfService": "0504",
+        "SymptomDescription": "Minor Repair",
+        "DisplayOrder": 0.0,
+        "DateOutOfServ": "2022-05-16T05:04:00",
+        "DateUpdated": "2022-05-16T07:48:02",
+        "EstimatedReturnToService": "2022-05-18T23:59:59"
+      }, {
+        "UnitName": "F05W02",
+        "UnitType": "ESCALATOR",
+        "UnitStatus": null,
+        "StationCode": "F05",
+        "StationName": "Navy Yard-Ballpark, Half Street Entrance",
+        "LocationDescription": "Escalator between street and mezzanine",
+        "SymptomCode": null,
+        "TimeOutOfService": "0956",
+        "SymptomDescription": "Minor Repair",
+        "DisplayOrder": 0.0,
+        "DateOutOfServ": "2022-05-13T09:56:00",
+        "DateUpdated": "2022-05-15T14:50:20",
+        "EstimatedReturnToService": "2022-05-15T23:59:59"
+      }, {
+        "UnitName": "F06S01",
+        "UnitType": "ESCALATOR",
+        "UnitStatus": null,
+        "StationCode": "F06",
+        "StationName": "Anacostia, Howard Road Entrance",
+        "LocationDescription": "Escalator between mezzanine and platform",
+        "SymptomCode": null,
+        "TimeOutOfService": "0333",
+        "SymptomDescription": "Modernization",
+        "DisplayOrder": 0.0,
+        "DateOutOfServ": "2022-04-19T03:33:00",
+        "DateUpdated": "2022-04-25T15:27:19",
+        "EstimatedReturnToService": "2022-08-15T23:59:59"
+      }, {
+        "UnitName": "F06S02",
+        "UnitType": "ESCALATOR",
+        "UnitStatus": null,
+        "StationCode": "F06",
+        "StationName": "Anacostia, Howard Road Entrance",
+        "LocationDescription": "Escalator between mezzanine and platform",
+        "SymptomCode": null,
+        "TimeOutOfService": "0419",
+        "SymptomDescription": "Minor Repair",
+        "DisplayOrder": 0.0,
+        "DateOutOfServ": "2022-05-13T04:19:00",
+        "DateUpdated": "2022-05-16T06:49:48",
+        "EstimatedReturnToService": "2022-05-15T23:59:59"
+      }, {
+        "UnitName": "F06S03",
+        "UnitType": "ESCALATOR",
+        "UnitStatus": null,
+        "StationCode": "F06",
+        "StationName": "Anacostia, Howard Road Entrance",
+        "LocationDescription": "Escalator between mezzanine and platform",
+        "SymptomCode": null,
+        "TimeOutOfService": "0644",
+        "SymptomDescription": "Other",
+        "DisplayOrder": 0.0,
+        "DateOutOfServ": "2022-05-09T06:44:00",
+        "DateUpdated": "2022-05-12T23:33:35",
+        "EstimatedReturnToService": "2022-05-16T23:59:59"
+      }, {
+        "UnitName": "F10X01",
+        "UnitType": "ESCALATOR",
+        "UnitStatus": null,
+        "StationCode": "F10",
+        "StationName": "Suitland",
+        "LocationDescription": "Escalator between mezzanine and garage",
+        "SymptomCode": null,
+        "TimeOutOfService": "0840",
+        "SymptomDescription": "Preventive Maintenance Inspection",
+        "DisplayOrder": 0.0,
+        "DateOutOfServ": "2022-05-16T08:40:00",
+        "DateUpdated": "2022-05-16T08:41:37",
+        "EstimatedReturnToService": "2022-05-18T23:59:59"
+      }, {
+        "UnitName": "K02X02",
+        "UnitType": "ESCALATOR",
+        "UnitStatus": null,
+        "StationCode": "K02",
+        "StationName": "Clarendon",
+        "LocationDescription": "Escalator between street and middle landing/tunnel",
+        "SymptomCode": null,
+        "TimeOutOfService": "0134",
+        "SymptomDescription": "Modernization",
+        "DisplayOrder": 0.0,
+        "DateOutOfServ": "2022-01-24T01:34:00",
+        "DateUpdated": "2022-04-25T15:28:00",
+        "EstimatedReturnToService": "2022-05-20T23:59:59"
+      }, {
+        "UnitName": "K03X03",
+        "UnitType": "ESCALATOR",
+        "UnitStatus": null,
+        "StationCode": "K03",
+        "StationName": "Virginia Square-GMU",
+        "LocationDescription": "Escalator between street and mezzanine",
+        "SymptomCode": null,
+        "TimeOutOfService": "0541",
+        "SymptomDescription": "Modernization",
+        "DisplayOrder": 0.0,
+        "DateOutOfServ": "2022-03-01T05:41:00",
+        "DateUpdated": "2022-03-15T22:37:06",
+        "EstimatedReturnToService": "2022-06-17T23:59:59"
+      }, {
+        "UnitName": "K04X01",
+        "UnitType": "ESCALATOR",
+        "UnitStatus": null,
+        "StationCode": "K04",
+        "StationName": "Ballston-MU",
+        "LocationDescription": "Escalator between street and middle landing",
+        "SymptomCode": null,
+        "TimeOutOfService": "2331",
+        "SymptomDescription": "Modernization",
+        "DisplayOrder": 0.0,
+        "DateOutOfServ": "2022-02-27T23:31:00",
+        "DateUpdated": "2022-04-19T09:33:26",
+        "EstimatedReturnToService": "2022-06-21T23:59:59"
+      }, {
+        "UnitName": "K04X04",
+        "UnitType": "ESCALATOR",
+        "UnitStatus": null,
+        "StationCode": "K04",
+        "StationName": "Ballston-MU",
+        "LocationDescription": "Escalator between middle landing and mezzanine",
+        "SymptomCode": null,
+        "TimeOutOfService": "2332",
+        "SymptomDescription": "Modernization",
+        "DisplayOrder": 0.0,
+        "DateOutOfServ": "2022-02-27T23:32:00",
+        "DateUpdated": "2022-04-19T09:33:42",
+        "EstimatedReturnToService": "2022-06-21T23:59:59"
+      }, {
+        "UnitName": "N01X06",
+        "UnitType": "ELEVATOR",
+        "UnitStatus": null,
+        "StationCode": "N01",
+        "StationName": "McLean",
+        "LocationDescription": "Elevator between mezzanine and platform",
+        "SymptomCode": null,
+        "TimeOutOfService": "1703",
+        "SymptomDescription": "Minor Repair",
+        "DisplayOrder": 0.0,
+        "DateOutOfServ": "2022-05-15T17:03:00",
+        "DateUpdated": "2022-05-15T17:11:23",
+        "EstimatedReturnToService": "2022-05-17T23:59:59"
+      }, {
+        "UnitName": "N02X02",
+        "UnitType": "ESCALATOR",
+        "UnitStatus": null,
+        "StationCode": "N02",
+        "StationName": "Tysons Corner",
+        "LocationDescription": "Escalator - south entry pavilion",
+        "SymptomCode": null,
+        "TimeOutOfService": "0610",
+        "SymptomDescription": "Preventive Maintenance Inspection",
+        "DisplayOrder": 0.0,
+        "DateOutOfServ": "2022-05-16T06:10:00",
+        "DateUpdated": "2022-05-16T06:11:33",
+        "EstimatedReturnToService": "2022-05-18T23:59:59"
+      }]
+    }
+    """
 }

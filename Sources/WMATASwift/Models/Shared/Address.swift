@@ -16,9 +16,7 @@ import Foundation
 
 // MARK: - Address
 struct Address: Codable {
-    let street, city: String?
-    let state: State?
-    let zip: String?
+    let street, city, state, zip: String?
 
     enum CodingKeys: String, CodingKey {
         case street = "Street"
@@ -49,7 +47,7 @@ extension Address {
     func with(
         street: String?? = nil,
         city: String?? = nil,
-        state: State?? = nil,
+        state: String?? = nil,
         zip: String?? = nil
     ) -> Address {
         return Address(

@@ -3460,4 +3460,25 @@ class ExampleData {
       }]
     }
     """
+    
+    static let stationInformationJSON = """
+    {
+      "Code": "A01",
+      "Name": "Metro Center",
+      "StationTogether1": "C01",
+      "StationTogether2": "",
+      "LineCode1": "RD",
+      "LineCode2": null,
+      "LineCode3": null,
+      "LineCode4": null,
+      "Lat": 38.898303,
+      "Lon": -77.028099,
+      "Address": {
+        "Street": "607 13th St. NW",
+        "City": "Washington",
+        "State": "DC",
+        "Zip": "20005"
+      }
+    }
+    """
 }

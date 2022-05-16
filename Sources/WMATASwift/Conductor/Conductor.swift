@@ -14,12 +14,13 @@ public class Conductor: Conducting {
     // MARK: - Properties
     var session = URLSession.shared
     var cacheResponseData = true
-    var cache = Cache<String, Data>(entryLifetime: 60, useLocalDisk: true)
+    var quickCache = Cache<String, Data>(entryLifetime: 10, useLocalDisk: true)
+    var longCache = Cache<String, Data>(useLocalDisk: true)
     public var apiKey: String?
     
     // MARK: - Functions
     public func validate() async throws -> Bool {
-        let data = try await request(Endpoints.validate)
+        let data = try await request(Endpoints.validate, cache: quickCache)
         guard let dataAsString = String(data: data, encoding: .utf8) else {
             return false
         }
@@ -31,17 +32,17 @@ public class Conductor: Conducting {
     }
     
     public func railStations() async throws -> [Station] {
-        let data = try await request(Endpoints.railStations)
+        let data = try await request(Endpoints.railStations, cache: longCache)
         return try RailStations(data: data).stations ?? []
     }
     
     public func nextTrains(atStation code: String) async throws -> [Train] {
-        let data = try await request(Endpoints.nextTrains(atStation: code))
+        let data = try await request(Endpoints.nextTrains(atStation: code), cache: quickCache)
         return try NextTrains(data: data).trains ?? []
     }
     
     // MARK: - Request
-    public func request(_ endpoint: Endpoint) async throws -> Data {
+    public func request(_ endpoint: Endpoint, cache: Cache<String, Data>? = nil) async throws -> Data {
         guard let url = endpoint.url else {
             throw WMATASwiftError.invalidURL
         }
@@ -50,14 +51,14 @@ public class Conductor: Conducting {
             throw WMATASwiftError.invalidAPIKey
         }
         
-        if cacheResponseData, let entry = cache.entry(forKey: endpoint.identifier) {
+        if cacheResponseData, let cache = cache, let entry = cache.entry(forKey: endpoint.identifier) {
             return entry.value
         }
         
         var request = URLRequest(url: url)
         request.setValue(apiKey, forHTTPHeaderField: "api_key")
         let (data, _) = try await session.data(for: request)
-        if cacheResponseData {
+        if cacheResponseData, let cache = cache {
             cache.insert(data, forKey: endpoint.identifier)
         }
         return data

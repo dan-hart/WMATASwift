@@ -68,4 +68,10 @@ class ModelTests: XCTestCase {
         XCTAssertNotNil(stationInformation)
         XCTAssertEqual(stationInformation.name, "Metro Center")
     }
+    
+    func testLiveTrainPositionsDeserialization() throws {
+        let liveTrainPositions = try LiveTrainPositions(ExampleData.liveTrainPositionsJSON)
+        XCTAssertNotNil(liveTrainPositions)
+        XCTAssertEqual(liveTrainPositions.trainPositions?.count, 57)
+    }
 }

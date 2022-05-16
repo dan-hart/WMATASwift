@@ -25,6 +25,10 @@ struct NextTrains: Codable {
     }
 }
 
+extension NextTrains {
+    static let preview = try? NextTrains(ExampleData.nextTrainsJSON)
+}
+
 // MARK: NextTrains convenience initializers and mutators
 
 extension NextTrains {

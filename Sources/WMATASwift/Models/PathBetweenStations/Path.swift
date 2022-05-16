@@ -16,7 +16,7 @@ import Foundation
 
 // MARK: - Path
 struct Path: Codable {
-    let lineCode: String?
+    let lineCode: LineCode?
     let stationCode, stationName: String?
     let seqNum, distanceToPrev: Int?
 
@@ -48,7 +48,7 @@ extension Path {
     }
 
     func with(
-        lineCode: String?? = nil,
+        lineCode: LineCode?? = nil,
         stationCode: String?? = nil,
         stationName: String?? = nil,
         seqNum: Int?? = nil,

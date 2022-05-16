@@ -17,7 +17,9 @@ import Foundation
 // MARK: - Train
 struct Train: Codable {
     let car, destination, destinationCode, destinationName: String?
-    let group, line, locationCode, locationName: String?
+    let group: String?
+    let line: LineCode?
+    let locationCode, locationName: String?
     let min: String?
 
     enum CodingKeys: String, CodingKey {
@@ -57,7 +59,7 @@ extension Train {
         destinationCode: String?? = nil,
         destinationName: String?? = nil,
         group: String?? = nil,
-        line: String?? = nil,
+        line: LineCode?? = nil,
         locationCode: String?? = nil,
         locationName: String?? = nil,
         min: String?? = nil

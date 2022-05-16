@@ -25,6 +25,10 @@ struct RailStations: Codable {
     }
 }
 
+extension RailStations {
+    static let preview = try? RailStations(ExampleData.railStationsJSON)
+}
+
 // MARK: RailStations convenience initializers and mutators
 
 extension RailStations {

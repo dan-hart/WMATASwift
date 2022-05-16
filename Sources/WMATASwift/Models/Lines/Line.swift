@@ -16,7 +16,8 @@ import Foundation
 
 // MARK: - Line
 struct Line: Codable {
-    let lineCode, displayName, startStationCode, endStationCode: String?
+    let lineCode: LineCode?
+    let displayName, startStationCode, endStationCode: String?
     let internalDestination1, internalDestination2: String?
 
     enum CodingKeys: String, CodingKey {
@@ -48,7 +49,7 @@ extension Line {
     }
 
     func with(
-        lineCode: String?? = nil,
+        lineCode: LineCode?? = nil,
         displayName: String?? = nil,
         startStationCode: String?? = nil,
         endStationCode: String?? = nil,

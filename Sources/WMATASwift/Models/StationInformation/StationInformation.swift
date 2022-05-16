@@ -17,8 +17,8 @@ import Foundation
 // MARK: - StationInformation
 struct StationInformation: Codable {
     let code, name, stationTogether1, stationTogether2: String?
-    let lineCode1: String?
-    let lineCode2, lineCode3, lineCode4: JSONNull?
+    let lineCode1: LineCode?
+    let lineCode2, lineCode3, lineCode4: LineCode?
     let lat, lon: Double?
     let address: Address?
 
@@ -60,10 +60,10 @@ extension StationInformation {
         name: String?? = nil,
         stationTogether1: String?? = nil,
         stationTogether2: String?? = nil,
-        lineCode1: String?? = nil,
-        lineCode2: JSONNull?? = nil,
-        lineCode3: JSONNull?? = nil,
-        lineCode4: JSONNull?? = nil,
+        lineCode1: LineCode?? = nil,
+        lineCode2: LineCode?? = nil,
+        lineCode3: LineCode?? = nil,
+        lineCode4: LineCode?? = nil,
         lat: Double?? = nil,
         lon: Double?? = nil,
         address: Address?? = nil

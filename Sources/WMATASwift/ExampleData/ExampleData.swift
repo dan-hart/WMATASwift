@@ -2562,4 +2562,54 @@ class ExampleData {
       }]
     }
     """
+    
+    static let railIncidentsJSON = """
+    {
+      "Incidents": [{
+        "IncidentID": "C879EA34-9016-4D14-A893-7CD5FF202307",
+        "Description": "Trains will operate every 20 minutes w/6-car trains. Delays possible, plan additional travel time.",
+        "StartLocationFullName": null,
+        "EndLocationFullName": null,
+        "PassengerDelay": 0.0,
+        "DelaySeverity": null,
+        "IncidentType": "Alert",
+        "EmergencyText": null,
+        "LinesAffected": "GR; YL;",
+        "DateUpdated": "2022-05-16T04:25:26"
+      }, {
+        "IncidentID": "063AAD3C-8536-4C95-B08E-DE27DEF3FD69",
+        "Description": "Trains will operate every 20 minutes w/6-car trains. Delays possible, plan additional travel time.",
+        "StartLocationFullName": null,
+        "EndLocationFullName": null,
+        "PassengerDelay": 0.0,
+        "DelaySeverity": null,
+        "IncidentType": "Alert",
+        "EmergencyText": null,
+        "LinesAffected": "BL; OR; SV;",
+        "DateUpdated": "2022-05-16T04:24:46"
+      }, {
+        "IncidentID": "576694E9-6AB7-4089-89C3-84319E44BD2B",
+        "Description": "Trains will operate every 10 minutes w/6-car trains. Delays possible, plan additional travel time.",
+        "StartLocationFullName": null,
+        "EndLocationFullName": null,
+        "PassengerDelay": 0.0,
+        "DelaySeverity": null,
+        "IncidentType": "Alert",
+        "EmergencyText": null,
+        "LinesAffected": "RD;",
+        "DateUpdated": "2022-05-16T04:23:50"
+      }, {
+        "IncidentID": "1344A65D-C830-41C9-8D5B-A026EABD8078",
+        "Description": "Thru October 21st, the Maryland Ave entrance will be closed due to the escalator replacement project. All other entrances will remain open.",
+        "StartLocationFullName": null,
+        "EndLocationFullName": null,
+        "PassengerDelay": 0.0,
+        "DelaySeverity": null,
+        "IncidentType": "Alert",
+        "EmergencyText": null,
+        "LinesAffected": "l'enfant plaza;",
+        "DateUpdated": "2022-05-09T08:45:38"
+      }]
+    }
+    """
 }

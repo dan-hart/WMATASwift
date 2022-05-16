@@ -1,12 +1,12 @@
 // This file was generated from JSON Schema using quicktype, do not modify it directly.
 // To parse the JSON, add this file to your project and do:
 //
-//   let nextTrains = try NextTrains(json)
+//   let address = try Address(json)
 //
 // To read values from URLs:
 //
-//   let task = URLSession.shared.nextTrainsTask(with: url) { nextTrains, response, error in
-//     if let nextTrains = nextTrains {
+//   let task = URLSession.shared.addressTask(with: url) { address, response, error in
+//     if let address = address {
 //       ...
 //     }
 //   }
@@ -14,22 +14,25 @@
 
 import Foundation
 
-// MARK: - NextTrains
-
-/// https://api.wmata.com/StationPrediction.svc/json/GetPrediction/B03
-struct NextTrains: Codable {
-    let trains: [Train]?
+// MARK: - Address
+struct Address: Codable {
+    let street, city: String?
+    let state: State?
+    let zip: String?
 
     enum CodingKeys: String, CodingKey {
-        case trains = "Trains"
+        case street = "Street"
+        case city = "City"
+        case state = "State"
+        case zip = "Zip"
     }
 }
 
-// MARK: NextTrains convenience initializers and mutators
+// MARK: Address convenience initializers and mutators
 
-extension NextTrains {
+extension Address {
     init(data: Data) throws {
-        self = try newJSONDecoder().decode(NextTrains.self, from: data)
+        self = try newJSONDecoder().decode(Address.self, from: data)
     }
 
     init(_ json: String, using encoding: String.Encoding = .utf8) throws {
@@ -44,10 +47,16 @@ extension NextTrains {
     }
 
     func with(
-        trains: [Train]?? = nil
-    ) -> NextTrains {
-        return NextTrains(
-            trains: trains ?? self.trains
+        street: String?? = nil,
+        city: String?? = nil,
+        state: State?? = nil,
+        zip: String?? = nil
+    ) -> Address {
+        return Address(
+            street: street ?? self.street,
+            city: city ?? self.city,
+            state: state ?? self.state,
+            zip: zip ?? self.zip
         )
     }
 

@@ -1,12 +1,12 @@
 // This file was generated from JSON Schema using quicktype, do not modify it directly.
 // To parse the JSON, add this file to your project and do:
 //
-//   let nextTrains = try NextTrains(json)
+//   let railStations = try RailStations(json)
 //
 // To read values from URLs:
 //
-//   let task = URLSession.shared.nextTrainsTask(with: url) { nextTrains, response, error in
-//     if let nextTrains = nextTrains {
+//   let task = URLSession.shared.railStationsTask(with: url) { railStations, response, error in
+//     if let railStations = railStations {
 //       ...
 //     }
 //   }
@@ -14,22 +14,20 @@
 
 import Foundation
 
-// MARK: - NextTrains
-
-/// https://api.wmata.com/StationPrediction.svc/json/GetPrediction/B03
-struct NextTrains: Codable {
-    let trains: [Train]?
+// MARK: - RailStations
+struct RailStations: Codable {
+    let stations: [Station]?
 
     enum CodingKeys: String, CodingKey {
-        case trains = "Trains"
+        case stations = "Stations"
     }
 }
 
-// MARK: NextTrains convenience initializers and mutators
+// MARK: RailStations convenience initializers and mutators
 
-extension NextTrains {
+extension RailStations {
     init(data: Data) throws {
-        self = try newJSONDecoder().decode(NextTrains.self, from: data)
+        self = try newJSONDecoder().decode(RailStations.self, from: data)
     }
 
     init(_ json: String, using encoding: String.Encoding = .utf8) throws {
@@ -44,10 +42,10 @@ extension NextTrains {
     }
 
     func with(
-        trains: [Train]?? = nil
-    ) -> NextTrains {
-        return NextTrains(
-            trains: trains ?? self.trains
+        stations: [Station]?? = nil
+    ) -> RailStations {
+        return RailStations(
+            stations: stations ?? self.stations
         )
     }
 

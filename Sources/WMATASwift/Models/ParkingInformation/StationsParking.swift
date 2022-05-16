@@ -16,10 +16,10 @@ import Foundation
 
 // MARK: - StationsParking
 public struct StationsParking: Codable {
-    let code: String?
-    let notes: String?
-    let allDayParking: AllDayParking?
-    let shortTermParking: ShortTermParking?
+    public let code: String?
+    public let notes: String?
+    public let allDayParking: AllDayParking?
+    public let shortTermParking: ShortTermParking?
 
     enum CodingKeys: String, CodingKey {
         case code = "Code"

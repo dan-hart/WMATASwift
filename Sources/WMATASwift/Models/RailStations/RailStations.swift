@@ -18,7 +18,7 @@ import Foundation
 
 /// https://api.wmata.com/Rail.svc/json/jStations
 public struct RailStations: Codable {
-    let stations: [Station]?
+    public let stations: [Station]?
 
     enum CodingKeys: String, CodingKey {
         case stations = "Stations"
@@ -26,7 +26,7 @@ public struct RailStations: Codable {
 }
 
 extension RailStations {
-    static let preview = try? RailStations(ExampleData.railStationsJSON)
+    public static let preview = try? RailStations(ExampleData.railStationsJSON)
 }
 
 // MARK: RailStations convenience initializers and mutators

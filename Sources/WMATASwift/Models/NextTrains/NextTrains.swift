@@ -18,7 +18,7 @@ import Foundation
 
 /// https://api.wmata.com/StationPrediction.svc/json/GetPrediction/B03
 public struct NextTrains: Codable {
-    let trains: [Train]?
+    public let trains: [Train]?
 
     enum CodingKeys: String, CodingKey {
         case trains = "Trains"
@@ -26,7 +26,7 @@ public struct NextTrains: Codable {
 }
 
 extension NextTrains {
-    static let preview = try? NextTrains(ExampleData.nextTrainsJSON)
+    public static let preview = try? NextTrains(ExampleData.nextTrainsJSON)
 }
 
 // MARK: NextTrains convenience initializers and mutators

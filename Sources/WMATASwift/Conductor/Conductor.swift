@@ -9,7 +9,7 @@ import Foundation
 import DHCacheKit
 
 public class Conductor: Conducting {
-    static var shared: Conducting = Conductor()
+    public static var shared: Conducting = Conductor()
     
     // MARK: - Properties
     var session = URLSession.shared

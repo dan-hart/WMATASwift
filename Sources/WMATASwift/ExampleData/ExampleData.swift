@@ -8,7 +8,7 @@
 import Foundation
 
 public class ExampleData {
-    static let nextTrainsJSON = """
+    public static let nextTrainsJSON = """
     {
       "Trains": [{
         "Car": "6",
@@ -74,7 +74,7 @@ public class ExampleData {
     }
     """
     
-    static let linesJSON = """
+    public static let linesJSON = """
     {
       "Lines": [{
         "LineCode": "BL",
@@ -122,7 +122,7 @@ public class ExampleData {
     }
     """
     
-    static let railStationsJSON = """
+    public static let railStationsJSON = """
     {
       "Stations": [{
         "Code": "A01",
@@ -1743,7 +1743,7 @@ public class ExampleData {
     }
     """
     
-    static let stationTimesJSON = """
+    public static let stationTimesJSON = """
     {
       "StationTimes": [{
         "Code": "E10",
@@ -1829,7 +1829,7 @@ public class ExampleData {
     }
     """
     
-    static let elevatorIncidentsJSON = """
+    public static let elevatorIncidentsJSON = """
     {
       "ElevatorIncidents": [{
         "UnitName": "A01E02",
@@ -2563,7 +2563,7 @@ public class ExampleData {
     }
     """
     
-    static let railIncidentsJSON = """
+    public static let railIncidentsJSON = """
     {
       "Incidents": [{
         "IncidentID": "C879EA34-9016-4D14-A893-7CD5FF202307",
@@ -2613,7 +2613,7 @@ public class ExampleData {
     }
     """
     
-    static let parkingInformationJSON = """
+    public static let parkingInformationJSON = """
     {
       "StationsParking": [{
         "Code": "A07",
@@ -3249,7 +3249,7 @@ public class ExampleData {
     }
     """
     
-    static let pathBetweenStationsJSON = """
+    public static let pathBetweenStationsJSON = """
     {
       "Path": [{
         "LineCode": "SV",
@@ -3423,7 +3423,7 @@ public class ExampleData {
     }
     """
     
-    static let stationEntrancesJSON = """
+    public static let stationEntrancesJSON = """
     {
       "Entrances": [{
         "ID": "88",
@@ -3461,7 +3461,7 @@ public class ExampleData {
     }
     """
     
-    static let stationInformationJSON = """
+    public static let stationInformationJSON = """
     {
       "Code": "A01",
       "Name": "Metro Center",
@@ -3482,7 +3482,7 @@ public class ExampleData {
     }
     """
     
-    static let liveTrainPositionsJSON = """
+    public static let liveTrainPositionsJSON = """
     {
       "TrainPositions": [{
         "TrainId": "334",

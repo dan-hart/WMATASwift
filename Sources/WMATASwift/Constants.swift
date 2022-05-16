@@ -8,6 +8,6 @@
 import Foundation
 
 public class Constants {
-    static let scheme = "https"
-    static let host = "api.wmata.com"
+    public static let scheme = "https"
+    public static let host = "api.wmata.com"
 }

@@ -16,8 +16,8 @@ import Foundation
 
 // MARK: - ShortTermParking
 public struct ShortTermParking: Codable {
-    let totalCount: Int?
-    let notes: String?
+    public let totalCount: Int?
+    public let notes: String?
 
     enum CodingKeys: String, CodingKey {
         case totalCount = "TotalCount"

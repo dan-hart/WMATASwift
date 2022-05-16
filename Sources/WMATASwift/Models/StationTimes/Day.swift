@@ -16,8 +16,8 @@ import Foundation
 
 // MARK: - Day
 public struct Day: Codable {
-    let openingTime: String?
-    let firstTrains, lastTrains: [StTrain]?
+    public let openingTime: String?
+    public let firstTrains, lastTrains: [StTrain]?
 
     enum CodingKeys: String, CodingKey {
         case openingTime = "OpeningTime"

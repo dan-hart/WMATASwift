@@ -16,9 +16,9 @@ import Foundation
 
 // MARK: - Line
 public struct Line: Codable {
-    let lineCode: LineCode?
-    let displayName, startStationCode, endStationCode: String?
-    let internalDestination1, internalDestination2: String?
+    public let lineCode: LineCode?
+    public let displayName, startStationCode, endStationCode: String?
+    public let internalDestination1, internalDestination2: String?
 
     enum CodingKeys: String, CodingKey {
         case lineCode = "LineCode"

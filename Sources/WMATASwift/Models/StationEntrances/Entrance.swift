@@ -16,9 +16,9 @@ import Foundation
 
 // MARK: - Entrance
 public struct Entrance: Codable {
-    let id, name, stationCode1, stationCode2: String?
-    let entranceDescription: String?
-    let lat, lon: Double?
+    public let id, name, stationCode1, stationCode2: String?
+    public let entranceDescription: String?
+    public let lat, lon: Double?
 
     enum CodingKeys: String, CodingKey {
         case id = "ID"

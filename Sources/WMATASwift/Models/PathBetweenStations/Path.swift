@@ -16,9 +16,9 @@ import Foundation
 
 // MARK: - Path
 public struct Path: Codable {
-    let lineCode: LineCode?
-    let stationCode, stationName: String?
-    let seqNum, distanceToPrev: Int?
+    public let lineCode: LineCode?
+    public let stationCode, stationName: String?
+    public let seqNum, distanceToPrev: Int?
 
     enum CodingKeys: String, CodingKey {
         case lineCode = "LineCode"

@@ -18,7 +18,7 @@ import Foundation
 
 /// https://api.wmata.com/Rail.svc/json/jLines
 public struct Lines: Codable {
-    let lines: [Line]?
+    public let lines: [Line]?
 
     enum CodingKeys: String, CodingKey {
         case lines = "Lines"

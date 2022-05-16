@@ -16,9 +16,9 @@ import Foundation
 
 // MARK: - AllDayParking
 public struct AllDayParking: Codable {
-    let totalCount: Int?
-    let riderCost, nonRiderCost: Double?
-    let saturdayRiderCost, saturdayNonRiderCost: Int?
+    public let totalCount: Int?
+    public let riderCost, nonRiderCost: Double?
+    public let saturdayRiderCost, saturdayNonRiderCost: Int?
 
     enum CodingKeys: String, CodingKey {
         case totalCount = "TotalCount"

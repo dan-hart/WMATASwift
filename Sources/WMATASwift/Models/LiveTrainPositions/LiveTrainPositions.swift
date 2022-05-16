@@ -18,7 +18,7 @@ import Foundation
 
 /// https://api.wmata.com/TrainPositions/TrainPositions?contentType=json
 public struct LiveTrainPositions: Codable {
-    let trainPositions: [TrainPosition]?
+    public let trainPositions: [TrainPosition]?
 
     enum CodingKeys: String, CodingKey {
         case trainPositions = "TrainPositions"

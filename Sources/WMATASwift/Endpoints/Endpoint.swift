@@ -8,8 +8,8 @@
 import Foundation
 
 public struct Endpoint {
-    let path: String
-    let queryItems: [URLQueryItem]
+    public let path: String
+    public let queryItems: [URLQueryItem]
 }
 
 extension Endpoint {

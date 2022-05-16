@@ -16,14 +16,14 @@ import Foundation
 
 // MARK: - Station
 public struct Station: Codable {
-    let code, name: String?
-    let stationTogether1: StationTogether1?
-    let stationTogether2: String?
-    let lineCode1: LineCode?
-    let lineCode2, lineCode3: LineCode?
-    let lineCode4: JSONNull?
-    let lat, lon: Double?
-    let address: Address?
+    public let code, name: String?
+    public let stationTogether1: StationTogether1?
+    public let stationTogether2: String?
+    public let lineCode1: LineCode?
+    public let lineCode2, lineCode3: LineCode?
+    public let lineCode4: JSONNull?
+    public let lat, lon: Double?
+    public let address: Address?
 
     enum CodingKeys: String, CodingKey {
         case code = "Code"

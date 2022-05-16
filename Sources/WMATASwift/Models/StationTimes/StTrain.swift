@@ -16,8 +16,8 @@ import Foundation
 
 // MARK: - StTrain
 public struct StTrain: Codable {
-    let time: String?
-    let destinationStation: DestinationStation?
+    public let time: String?
+    public let destinationStation: DestinationStation?
 
     enum CodingKeys: String, CodingKey {
         case time = "Time"

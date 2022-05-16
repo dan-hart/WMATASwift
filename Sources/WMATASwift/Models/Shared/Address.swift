@@ -16,7 +16,7 @@ import Foundation
 
 // MARK: - Address
 public struct Address: Codable {
-    let street, city, state, zip: String?
+    public let street, city, state, zip: String?
 
     enum CodingKeys: String, CodingKey {
         case street = "Street"

@@ -18,7 +18,7 @@ import Foundation
 
 /// https://api.wmata.com/Incidents.svc/json/ElevatorIncidents
 public struct ElevatorIncidents: Codable {
-    let elevatorIncidents: [ElevatorIncident]?
+    public let elevatorIncidents: [ElevatorIncident]?
 
     enum CodingKeys: String, CodingKey {
         case elevatorIncidents = "ElevatorIncidents"

@@ -16,12 +16,12 @@ import Foundation
 
 // MARK: - TrainPosition
 public struct TrainPosition: Codable {
-    let trainID, trainNumber: String?
-    let carCount, directionNum, circuitID: Int?
-    let destinationStationCode: String?
-    let lineCode: LineCode?
-    let secondsAtLocation: Int?
-    let serviceType: ServiceType?
+    public let trainID, trainNumber: String?
+    public let carCount, directionNum, circuitID: Int?
+    public let destinationStationCode: String?
+    public let lineCode: LineCode?
+    public let secondsAtLocation: Int?
+    public let serviceType: ServiceType?
 
     enum CodingKeys: String, CodingKey {
         case trainID = "TrainId"

@@ -16,11 +16,11 @@ import Foundation
 
 // MARK: - Train
 public struct Train: Codable {
-    let car, destination, destinationCode, destinationName: String?
-    let group: String?
-    let line: LineCode?
-    let locationCode, locationName: String?
-    let min: String?
+    public let car, destination, destinationCode, destinationName: String?
+    public let group: String?
+    public let line: LineCode?
+    public let locationCode, locationName: String?
+    public let min: String?
 
     enum CodingKeys: String, CodingKey {
         case car = "Car"

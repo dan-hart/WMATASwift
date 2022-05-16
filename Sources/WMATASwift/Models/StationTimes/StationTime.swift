@@ -16,9 +16,9 @@ import Foundation
 
 // MARK: - StationTime
 public struct StationTime: Codable {
-    let code, stationName: String?
-    let monday, tuesday, wednesday, thursday: Day?
-    let friday, saturday, sunday: Day?
+    public let code, stationName: String?
+    public let monday, tuesday, wednesday, thursday: Day?
+    public let friday, saturday, sunday: Day?
 
     enum CodingKeys: String, CodingKey {
         case code = "Code"

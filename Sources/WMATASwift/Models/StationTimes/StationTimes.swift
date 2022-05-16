@@ -18,7 +18,7 @@ import Foundation
 
 /// https://api.wmata.com/Rail.svc/json/jStationTimes
 public struct StationTimes: Codable {
-    let stationTimes: [StationTime]?
+    public let stationTimes: [StationTime]?
 
     enum CodingKeys: String, CodingKey {
         case stationTimes = "StationTimes"

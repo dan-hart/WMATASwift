@@ -16,13 +16,13 @@ import Foundation
 
 // MARK: - Incident
 public struct Incident: Codable {
-    let incidentID, incidentDescription: String?
-    let startLocationFullName, endLocationFullName: JSONNull?
-    let passengerDelay: Int?
-    let delaySeverity: JSONNull?
-    let incidentType: String?
-    let emergencyText: JSONNull?
-    let linesAffected, dateUpdated: String?
+    public let incidentID, incidentDescription: String?
+    public let startLocationFullName, endLocationFullName: JSONNull?
+    public let passengerDelay: Int?
+    public let delaySeverity: JSONNull?
+    public let incidentType: String?
+    public let emergencyText: JSONNull?
+    public let linesAffected, dateUpdated: String?
 
     enum CodingKeys: String, CodingKey {
         case incidentID = "IncidentID"

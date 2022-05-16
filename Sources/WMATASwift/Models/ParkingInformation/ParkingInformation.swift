@@ -18,7 +18,7 @@ import Foundation
 
 /// https://api.wmata.com/Rail.svc/json/jStationParking
 public struct ParkingInformation: Codable {
-    let stationsParking: [StationsParking]?
+    public let stationsParking: [StationsParking]?
 
     enum CodingKeys: String, CodingKey {
         case stationsParking = "StationsParking"

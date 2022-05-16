@@ -10,6 +10,7 @@ public enum LineCode: String, Codable {
     case rd = "RD"
     case sv = "SV"
     case yl = "YL"
+    case unkown = "Unkown"
     
     #if canImport(SwiftUI)
     public var color: Color? {
@@ -26,6 +27,8 @@ public enum LineCode: String, Codable {
             return .gray
         case .yl:
             return .yellow
+        case .unkown
+            return .black
         }
     }
     #endif
@@ -44,6 +47,8 @@ public enum LineCode: String, Codable {
             return "Silver"
         case .yl:
             return "Yellow"
+        case .unkown:
+            return "Unkown"
         }
     }
 }

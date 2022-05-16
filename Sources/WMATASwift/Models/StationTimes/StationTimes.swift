@@ -1,12 +1,12 @@
 // This file was generated from JSON Schema using quicktype, do not modify it directly.
 // To parse the JSON, add this file to your project and do:
 //
-//   let railStations = try RailStations(json)
+//   let stationTimes = try StationTimes(json)
 //
 // To read values from URLs:
 //
-//   let task = URLSession.shared.railStationsTask(with: url) { railStations, response, error in
-//     if let railStations = railStations {
+//   let task = URLSession.shared.stationTimesTask(with: url) { stationTimes, response, error in
+//     if let stationTimes = stationTimes {
 //       ...
 //     }
 //   }
@@ -14,22 +14,22 @@
 
 import Foundation
 
-// MARK: - RailStations
+// MARK: - StationTimes
 
-/// https://api.wmata.com/Rail.svc/json/jStations
-struct RailStations: Codable {
-    let stations: [Station]?
+/// https://api.wmata.com/Rail.svc/json/jStationTimes
+struct StationTimes: Codable {
+    let stationTimes: [StationTime]?
 
     enum CodingKeys: String, CodingKey {
-        case stations = "Stations"
+        case stationTimes = "StationTimes"
     }
 }
 
-// MARK: RailStations convenience initializers and mutators
+// MARK: StationTimes convenience initializers and mutators
 
-extension RailStations {
+extension StationTimes {
     init(data: Data) throws {
-        self = try newJSONDecoder().decode(RailStations.self, from: data)
+        self = try newJSONDecoder().decode(StationTimes.self, from: data)
     }
 
     init(_ json: String, using encoding: String.Encoding = .utf8) throws {
@@ -44,10 +44,10 @@ extension RailStations {
     }
 
     func with(
-        stations: [Station]?? = nil
-    ) -> RailStations {
-        return RailStations(
-            stations: stations ?? self.stations
+        stationTimes: [StationTime]?? = nil
+    ) -> StationTimes {
+        return StationTimes(
+            stationTimes: stationTimes ?? self.stationTimes
         )
     }
 

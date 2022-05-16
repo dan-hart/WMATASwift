@@ -1,12 +1,12 @@
 // This file was generated from JSON Schema using quicktype, do not modify it directly.
 // To parse the JSON, add this file to your project and do:
 //
-//   let railStations = try RailStations(json)
+//   let day = try Day(json)
 //
 // To read values from URLs:
 //
-//   let task = URLSession.shared.railStationsTask(with: url) { railStations, response, error in
-//     if let railStations = railStations {
+//   let task = URLSession.shared.dayTask(with: url) { day, response, error in
+//     if let day = day {
 //       ...
 //     }
 //   }
@@ -14,22 +14,23 @@
 
 import Foundation
 
-// MARK: - RailStations
-
-/// https://api.wmata.com/Rail.svc/json/jStations
-struct RailStations: Codable {
-    let stations: [Station]?
+// MARK: - Day
+struct Day: Codable {
+    let openingTime: String?
+    let firstTrains, lastTrains: [StTrain]?
 
     enum CodingKeys: String, CodingKey {
-        case stations = "Stations"
+        case openingTime = "OpeningTime"
+        case firstTrains = "FirstTrains"
+        case lastTrains = "LastTrains"
     }
 }
 
-// MARK: RailStations convenience initializers and mutators
+// MARK: Day convenience initializers and mutators
 
-extension RailStations {
+extension Day {
     init(data: Data) throws {
-        self = try newJSONDecoder().decode(RailStations.self, from: data)
+        self = try newJSONDecoder().decode(Day.self, from: data)
     }
 
     init(_ json: String, using encoding: String.Encoding = .utf8) throws {
@@ -44,10 +45,14 @@ extension RailStations {
     }
 
     func with(
-        stations: [Station]?? = nil
-    ) -> RailStations {
-        return RailStations(
-            stations: stations ?? self.stations
+        openingTime: String?? = nil,
+        firstTrains: [StTrain]?? = nil,
+        lastTrains: [StTrain]?? = nil
+    ) -> Day {
+        return Day(
+            openingTime: openingTime ?? self.openingTime,
+            firstTrains: firstTrains ?? self.firstTrains,
+            lastTrains: lastTrains ?? self.lastTrains
         )
     }
 

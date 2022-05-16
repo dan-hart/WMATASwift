@@ -10,7 +10,7 @@ import Foundation
 import SwiftUI
 
 public class Locomotive: ObservableObject {
-    @Published var stations: [Station] = []
+    @Published public var stations: [Station] = []
     
     // MARK: - Timer
     var fetchTimer: Timer?

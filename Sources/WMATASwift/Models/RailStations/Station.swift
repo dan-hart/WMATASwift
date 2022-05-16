@@ -21,7 +21,7 @@ public struct Station: Codable, Hashable {
     public let stationTogether2: String?
     public let lineCode1: LineCode?
     public let lineCode2, lineCode3: LineCode?
-    public let lineCode4: JSONNull?
+    public let lineCode4: LineCode?
     public let lat, lon: Double?
     public let address: Address?
 
@@ -38,6 +38,10 @@ public struct Station: Codable, Hashable {
         case lon = "Lon"
         case address = "Address"
     }
+}
+
+extension Station {
+    public static let preview = Station(code: "123", name: "Metro Center", stationTogether1: nil, stationTogether2: nil, lineCode1: .bl, lineCode2: .gr, lineCode3: .rd, lineCode4: nil, lat: 90, lon: -34, address: Address(street: "123 Main St", city: "Arlington", state: "VA", zip: "22202"))
 }
 
 // MARK: Station convenience initializers and mutators
@@ -66,7 +70,7 @@ extension Station {
         lineCode1: LineCode?? = nil,
         lineCode2: LineCode?? = nil,
         lineCode3: LineCode?? = nil,
-        lineCode4: JSONNull?? = nil,
+        lineCode4: LineCode?? = nil,
         lat: Double?? = nil,
         lon: Double?? = nil,
         address: Address?? = nil

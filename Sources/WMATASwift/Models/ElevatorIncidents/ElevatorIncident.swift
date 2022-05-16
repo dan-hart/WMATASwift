@@ -60,7 +60,7 @@ extension ElevatorIncident {
         try self.init(data: try Data(contentsOf: url))
     }
 
-    func with(
+    public func with(
         unitName: String?? = nil,
         unitType: UnitType?? = nil,
         unitStatus: JSONNull?? = nil,

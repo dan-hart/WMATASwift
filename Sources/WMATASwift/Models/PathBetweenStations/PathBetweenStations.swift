@@ -1,12 +1,12 @@
 // This file was generated from JSON Schema using quicktype, do not modify it directly.
 // To parse the JSON, add this file to your project and do:
 //
-//   let parkingInformation = try ParkingInformation(json)
+//   let pathBetweenStations = try PathBetweenStations(json)
 //
 // To read values from URLs:
 //
-//   let task = URLSession.shared.parkingInformationTask(with: url) { parkingInformation, response, error in
-//     if let parkingInformation = parkingInformation {
+//   let task = URLSession.shared.pathBetweenStationsTask(with: url) { pathBetweenStations, response, error in
+//     if let pathBetweenStations = pathBetweenStations {
 //       ...
 //     }
 //   }
@@ -14,22 +14,22 @@
 
 import Foundation
 
-// MARK: - ParkingInformation
+// MARK: - PathBetweenStations
 
-/// https://api.wmata.com/Rail.svc/json/jStationParking
-struct ParkingInformation: Codable {
-    let stationsParking: [StationsParking]?
+/// https://api.wmata.com/Rail.svc/json/jPath?FromStationCode=N06&ToStationCode=G05
+struct PathBetweenStations: Codable {
+    let path: [Path]?
 
     enum CodingKeys: String, CodingKey {
-        case stationsParking = "StationsParking"
+        case path = "Path"
     }
 }
 
-// MARK: ParkingInformation convenience initializers and mutators
+// MARK: PathBetweenStations convenience initializers and mutators
 
-extension ParkingInformation {
+extension PathBetweenStations {
     init(data: Data) throws {
-        self = try newJSONDecoder().decode(ParkingInformation.self, from: data)
+        self = try newJSONDecoder().decode(PathBetweenStations.self, from: data)
     }
 
     init(_ json: String, using encoding: String.Encoding = .utf8) throws {
@@ -44,10 +44,10 @@ extension ParkingInformation {
     }
 
     func with(
-        stationsParking: [StationsParking]?? = nil
-    ) -> ParkingInformation {
-        return ParkingInformation(
-            stationsParking: stationsParking ?? self.stationsParking
+        path: [Path]?? = nil
+    ) -> PathBetweenStations {
+        return PathBetweenStations(
+            path: path ?? self.path
         )
     }
 

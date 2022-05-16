@@ -48,6 +48,18 @@ class ModelTests: XCTestCase {
     func testParkingInformationDeserialization() throws {
         let parkingInformation = try ParkingInformation(ExampleData.parkingInformationJSON)
         XCTAssertNotNil(parkingInformation)
-        XCTAssertEqual(parkingInformation.stationsParking.count, 24)
+        XCTAssertEqual(parkingInformation.stationsParking?.count, 45)
+    }
+    
+    func testPathBetweenStationsDeserialization() throws {
+        let pathBetweenStations = try PathBetweenStations(ExampleData.pathBetweenStationsJSON)
+        XCTAssertNotNil(pathBetweenStations)
+        XCTAssertEqual(pathBetweenStations.path?.count, 28)
+    }
+    
+    func testStationEntrancesDeserialization() throws {
+        let stationEntrances = try StationEntrances(ExampleData.stationEntrancesJSON)
+        XCTAssertNotNil(stationEntrances)
+        XCTAssertEqual(stationEntrances.entrances?.count, 4)
     }
 }

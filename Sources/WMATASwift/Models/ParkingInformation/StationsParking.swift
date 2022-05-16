@@ -13,13 +13,11 @@
 //   task.resume()
 
 import Foundation
-import BetterCodable
 
 // MARK: - StationsParking
 struct StationsParking: Codable {
     let code: String?
-    
-    @LosslessValue var notes: String
+    let notes: String?
     let allDayParking: AllDayParking?
     let shortTermParking: ShortTermParking?
 
@@ -51,13 +49,13 @@ extension StationsParking {
 
     func with(
         code: String?? = nil,
-        notes: String,
+        notes: String?? = nil,
         allDayParking: AllDayParking?? = nil,
         shortTermParking: ShortTermParking?? = nil
     ) -> StationsParking {
         return StationsParking(
             code: code ?? self.code,
-            notes: notes,
+            notes: notes ?? self.notes,
             allDayParking: allDayParking ?? self.allDayParking,
             shortTermParking: shortTermParking ?? self.shortTermParking
         )

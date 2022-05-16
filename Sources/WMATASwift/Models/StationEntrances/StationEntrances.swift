@@ -1,12 +1,12 @@
 // This file was generated from JSON Schema using quicktype, do not modify it directly.
 // To parse the JSON, add this file to your project and do:
 //
-//   let parkingInformation = try ParkingInformation(json)
+//   let stationEntrances = try StationEntrances(json)
 //
 // To read values from URLs:
 //
-//   let task = URLSession.shared.parkingInformationTask(with: url) { parkingInformation, response, error in
-//     if let parkingInformation = parkingInformation {
+//   let task = URLSession.shared.stationEntrancesTask(with: url) { stationEntrances, response, error in
+//     if let stationEntrances = stationEntrances {
 //       ...
 //     }
 //   }
@@ -14,22 +14,22 @@
 
 import Foundation
 
-// MARK: - ParkingInformation
+// MARK: - StationEntrances
 
-/// https://api.wmata.com/Rail.svc/json/jStationParking
-struct ParkingInformation: Codable {
-    let stationsParking: [StationsParking]?
+/// https://api.wmata.com/Rail.svc/json/jStationEntrances?Lat=38.8978168&Lon=-77.0404246&Radius=500
+struct StationEntrances: Codable {
+    let entrances: [Entrance]?
 
     enum CodingKeys: String, CodingKey {
-        case stationsParking = "StationsParking"
+        case entrances = "Entrances"
     }
 }
 
-// MARK: ParkingInformation convenience initializers and mutators
+// MARK: StationEntrances convenience initializers and mutators
 
-extension ParkingInformation {
+extension StationEntrances {
     init(data: Data) throws {
-        self = try newJSONDecoder().decode(ParkingInformation.self, from: data)
+        self = try newJSONDecoder().decode(StationEntrances.self, from: data)
     }
 
     init(_ json: String, using encoding: String.Encoding = .utf8) throws {
@@ -44,10 +44,10 @@ extension ParkingInformation {
     }
 
     func with(
-        stationsParking: [StationsParking]?? = nil
-    ) -> ParkingInformation {
-        return ParkingInformation(
-            stationsParking: stationsParking ?? self.stationsParking
+        entrances: [Entrance]?? = nil
+    ) -> StationEntrances {
+        return StationEntrances(
+            entrances: entrances ?? self.entrances
         )
     }
 

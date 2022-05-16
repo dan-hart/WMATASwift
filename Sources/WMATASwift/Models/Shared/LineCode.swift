@@ -12,7 +12,7 @@ public enum LineCode: String, Codable {
     case yl = "YL"
     
     #if canImport(SwiftUI)
-    var color: Color? {
+    public var color: Color? {
         switch self {
         case .bl:
             return .blue
@@ -30,7 +30,7 @@ public enum LineCode: String, Codable {
     }
     #endif
     
-    var title: String? {
+    public var title: String? {
         switch self {
         case .bl:
             return "Blue"

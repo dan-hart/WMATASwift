@@ -18,7 +18,9 @@ extension Endpoint {
         components.scheme = Constants.scheme
         components.host = Constants.host
         components.path = path
-        components.queryItems = queryItems
+        if !queryItems.isEmpty {
+            components.queryItems = queryItems
+        }
 
         return components.url
     }

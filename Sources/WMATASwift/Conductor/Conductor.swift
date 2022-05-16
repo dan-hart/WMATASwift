@@ -16,16 +16,7 @@ class Conductor: Conducting {
     
     // MARK: - Functions
     func validate() async throws -> Bool {
-        let endpoint = Endpoints.validate
-        guard let url = endpoint.url else {
-            throw WMATASwiftError.invalidURL
-        }
-        guard let apiKey = apiKey else {
-            throw WMATASwiftError.invalidAPIKey
-        }
-        var request = URLRequest(url: url)
-        request.setValue(apiKey, forHTTPHeaderField: "api_key")
-        let (data, _) = try await session.data(for: request)
+        let data = try await request(Endpoints.validate)
         guard let dataAsString = String(data: data, encoding: .utf8) else {
             return false
         }
@@ -37,15 +28,17 @@ class Conductor: Conducting {
     }
     
     func railStations() async throws -> [Station] {
-        return try await request(Endpoints.railStations)
+        let data = try await request(Endpoints.railStations)
+        return try RailStations(data: data).stations ?? []
     }
     
     func nextTrains(atStation code: String) async throws -> [Train] {
-        return try await request(Endpoints.nextTrains(atStation: code))
+        let data = try await request(Endpoints.nextTrains(atStation: code))
+        return try NextTrains(data: data).trains ?? []
     }
     
     // MARK: - Request
-    func request<T: Codable>(_ endpoint: Endpoint) async throws -> T {
+    func request(_ endpoint: Endpoint) async throws -> Data {
         guard let url = endpoint.url else {
             throw WMATASwiftError.invalidURL
         }
@@ -57,7 +50,7 @@ class Conductor: Conducting {
         var request = URLRequest(url: url)
         request.setValue(apiKey, forHTTPHeaderField: "api_key")
         let (data, _) = try await session.data(for: request)
-        return try newJSONDecoder().decode(T.self, from: data)
+        return data
     }
     
     enum WMATASwiftError: Error {

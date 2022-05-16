@@ -15,7 +15,7 @@ public class Locomotive: ObservableObject {
     // MARK: - Timer
     var fetchTimer: Timer?
     
-    init() {
+    public init() {
         fetchTimer = Timer.scheduledTimer(timeInterval: 60.0, target: self, selector: #selector(Locomotive.fetch), userInfo: nil, repeats: true)
     }
 

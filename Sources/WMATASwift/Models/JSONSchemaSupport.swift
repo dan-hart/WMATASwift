@@ -30,10 +30,6 @@ extension URLSession {
             completionHandler(try? newJSONDecoder().decode(T.self, from: data), response, nil)
         }
     }
-
-    func railStationsTask(with url: URL, completionHandler: @escaping (RailStations?, URLResponse?, Error?) -> Void) -> URLSessionDataTask {
-        return self.codableTask(with: url, completionHandler: completionHandler)
-    }
 }
 
 // MARK: - Encode/decode helpers

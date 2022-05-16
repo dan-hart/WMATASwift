@@ -17,7 +17,7 @@ import Foundation
 // MARK: - StationTimes
 
 /// https://api.wmata.com/Rail.svc/json/jStationTimes
-struct StationTimes: Codable {
+public struct StationTimes: Codable {
     let stationTimes: [StationTime]?
 
     enum CodingKeys: String, CodingKey {

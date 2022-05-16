@@ -8,7 +8,7 @@
 import XCTest
 @testable import WMATASwift
 
-class EndpointTests: XCTestCase {
+public class EndpointTests: XCTestCase {
     func testRailStationsEndpoint() {
         let endpoint = Endpoints.railStations
         XCTAssertEqual(endpoint.url?.absoluteString, "https://api.wmata.com/Rail.svc/json/jStations")

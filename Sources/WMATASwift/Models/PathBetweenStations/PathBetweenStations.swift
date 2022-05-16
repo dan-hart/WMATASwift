@@ -17,7 +17,7 @@ import Foundation
 // MARK: - PathBetweenStations
 
 /// https://api.wmata.com/Rail.svc/json/jPath?FromStationCode=N06&ToStationCode=G05
-struct PathBetweenStations: Codable {
+public struct PathBetweenStations: Codable {
     let path: [Path]?
 
     enum CodingKeys: String, CodingKey {

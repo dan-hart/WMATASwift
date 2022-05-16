@@ -15,7 +15,7 @@
 import Foundation
 
 // MARK: - Incident
-struct Incident: Codable {
+public struct Incident: Codable {
     let incidentID, incidentDescription: String?
     let startLocationFullName, endLocationFullName: JSONNull?
     let passengerDelay: Int?

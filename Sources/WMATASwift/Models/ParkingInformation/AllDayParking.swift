@@ -15,7 +15,7 @@
 import Foundation
 
 // MARK: - AllDayParking
-struct AllDayParking: Codable {
+public struct AllDayParking: Codable {
     let totalCount: Int?
     let riderCost, nonRiderCost: Double?
     let saturdayRiderCost, saturdayNonRiderCost: Int?

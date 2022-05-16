@@ -17,7 +17,7 @@ import Foundation
 // MARK: - ElevatorIncidents
 
 /// https://api.wmata.com/Incidents.svc/json/ElevatorIncidents
-struct ElevatorIncidents: Codable {
+public struct ElevatorIncidents: Codable {
     let elevatorIncidents: [ElevatorIncident]?
 
     enum CodingKeys: String, CodingKey {

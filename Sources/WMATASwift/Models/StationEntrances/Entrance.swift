@@ -15,7 +15,7 @@
 import Foundation
 
 // MARK: - Entrance
-struct Entrance: Codable {
+public struct Entrance: Codable {
     let id, name, stationCode1, stationCode2: String?
     let entranceDescription: String?
     let lat, lon: Double?

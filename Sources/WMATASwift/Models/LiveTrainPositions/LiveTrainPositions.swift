@@ -17,7 +17,7 @@ import Foundation
 // MARK: - LiveTrainPositions
 
 /// https://api.wmata.com/TrainPositions/TrainPositions?contentType=json
-struct LiveTrainPositions: Codable {
+public struct LiveTrainPositions: Codable {
     let trainPositions: [TrainPosition]?
 
     enum CodingKeys: String, CodingKey {

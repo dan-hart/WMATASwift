@@ -1,5 +1,7 @@
 import Foundation
+#if canImport(SwiftUI)
 import SwiftUI
+#endif
 
 enum LineCode: String, Codable {
     case bl = "BL"
@@ -9,6 +11,7 @@ enum LineCode: String, Codable {
     case sv = "SV"
     case yl = "YL"
     
+    #if canImport(SwiftUI)
     var color: Color? {
         switch self {
         case .bl:
@@ -25,6 +28,7 @@ enum LineCode: String, Codable {
             return .yellow
         }
     }
+    #endif
     
     var title: String? {
         switch self {

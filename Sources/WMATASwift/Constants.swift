@@ -7,7 +7,7 @@
 
 import Foundation
 
-class Constants {
+public class Constants {
     static let scheme = "https"
     static let host = "api.wmata.com"
 }

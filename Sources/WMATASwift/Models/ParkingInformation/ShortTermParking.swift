@@ -15,7 +15,7 @@
 import Foundation
 
 // MARK: - ShortTermParking
-struct ShortTermParking: Codable {
+public struct ShortTermParking: Codable {
     let totalCount: Int?
     let notes: String?
 

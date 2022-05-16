@@ -15,7 +15,7 @@
 import Foundation
 
 // MARK: - Day
-struct Day: Codable {
+public struct Day: Codable {
     let openingTime: String?
     let firstTrains, lastTrains: [StTrain]?
 

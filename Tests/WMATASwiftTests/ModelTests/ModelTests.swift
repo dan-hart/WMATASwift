@@ -8,7 +8,7 @@
 import XCTest
 @testable import WMATASwift
 
-class ModelTests: XCTestCase {
+public class ModelTests: XCTestCase {
     func testNextTrainsDeserialization() throws {
         let nextTrains = try NextTrains(ExampleData.nextTrainsJSON)
         XCTAssertNotNil(nextTrains)

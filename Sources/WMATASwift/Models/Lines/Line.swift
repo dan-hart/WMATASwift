@@ -15,7 +15,7 @@
 import Foundation
 
 // MARK: - Line
-struct Line: Codable {
+public struct Line: Codable {
     let lineCode: LineCode?
     let displayName, startStationCode, endStationCode: String?
     let internalDestination1, internalDestination2: String?

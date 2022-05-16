@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Endpoint {
+public struct Endpoint {
     let path: String
     let queryItems: [URLQueryItem]
 }

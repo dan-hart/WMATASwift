@@ -15,7 +15,7 @@
 import Foundation
 
 // MARK: - StationInformation
-struct StationInformation: Codable {
+public struct StationInformation: Codable {
     let code, name, stationTogether1, stationTogether2: String?
     let lineCode1: LineCode?
     let lineCode2, lineCode3, lineCode4: LineCode?

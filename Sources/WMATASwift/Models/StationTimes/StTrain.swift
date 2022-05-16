@@ -15,7 +15,7 @@
 import Foundation
 
 // MARK: - StTrain
-struct StTrain: Codable {
+public struct StTrain: Codable {
     let time: String?
     let destinationStation: DestinationStation?
 

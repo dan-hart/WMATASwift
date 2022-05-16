@@ -17,7 +17,7 @@ import Foundation
 // MARK: - NextTrains
 
 /// https://api.wmata.com/StationPrediction.svc/json/GetPrediction/B03
-struct NextTrains: Codable {
+public struct NextTrains: Codable {
     let trains: [Train]?
 
     enum CodingKeys: String, CodingKey {

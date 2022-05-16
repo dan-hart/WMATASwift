@@ -17,7 +17,7 @@ import Foundation
 // MARK: - Lines
 
 /// https://api.wmata.com/Rail.svc/json/jLines
-struct Lines: Codable {
+public struct Lines: Codable {
     let lines: [Line]?
 
     enum CodingKeys: String, CodingKey {

@@ -8,7 +8,7 @@
 import Foundation
 import DHCacheKit
 
-class Conductor: Conducting {
+public class Conductor: Conducting {
     static var shared: Conducting = Conductor()
     
     // MARK: - Properties
@@ -56,7 +56,7 @@ class Conductor: Conducting {
         
         var request = URLRequest(url: url)
         request.setValue(apiKey, forHTTPHeaderField: "api_key")
-        let (data, _) = try await session.data(for: request)'
+        let (data, _) = try await session.data(for: request)
         if cacheResponseData {
             cache.insert(data, forKey: endpoint.identifier)
         }

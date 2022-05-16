@@ -7,7 +7,7 @@
 
 import Foundation
 
-class ExampleData {
+public class ExampleData {
     static let nextTrainsJSON = """
     {
       "Trains": [{

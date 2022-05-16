@@ -7,7 +7,7 @@
 
 import Foundation
 
-class Endpoints {
+public class Endpoints {
     static let validate = Endpoint(path: "/Misc/Validate", queryItems: [])
     
     static let railStations = Endpoint(path: "/Rail.svc/json/jStations", queryItems: [])

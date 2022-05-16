@@ -9,7 +9,7 @@ import Foundation
 #if canImport(SwiftUI)
 import SwiftUI
 
-class Locomotive: ObservableObject {
+public class Locomotive: ObservableObject {
     @Published var stations: [Station] = []
     
     // MARK: - Timer

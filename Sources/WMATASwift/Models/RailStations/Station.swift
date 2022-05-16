@@ -15,7 +15,7 @@
 import Foundation
 
 // MARK: - Station
-struct Station: Codable {
+public struct Station: Codable {
     let code, name: String?
     let stationTogether1: StationTogether1?
     let stationTogether2: String?

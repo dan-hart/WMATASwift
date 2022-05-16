@@ -27,7 +27,7 @@ public enum LineCode: String, Codable {
             return .gray
         case .yl:
             return .yellow
-        case .unkown
+        case .unkown:
             return .black
         }
     }

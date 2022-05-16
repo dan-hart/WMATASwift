@@ -9,6 +9,8 @@ import Foundation
 @testable import WMATASwift
 
 class MockConductor: Conducting {
+    var apiKey: String?
+    
     var isValidated = true
     var railStations = RailStations.preview
     var nextTrains = NextTrains.preview

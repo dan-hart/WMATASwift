@@ -12,14 +12,20 @@ class Conductor: Conducting {
     
     // MARK: - Properties
     var session = URLSession.shared
+    var apiKey: String?
     
     // MARK: - Functions
     func validate() async throws -> Bool {
         let endpoint = Endpoints.validate
         guard let url = endpoint.url else {
-            return false
+            throw WMATASwiftError.invalidURL
         }
-        let (data, _) = try await session.data(from: url)
+        guard let apiKey = apiKey else {
+            throw WMATASwiftError.invalidAPIKey
+        }
+        var request = URLRequest(url: url)
+        request.setValue(apiKey, forHTTPHeaderField: "api_key")
+        let (data, _) = try await session.data(for: request)
         guard let dataAsString = String(data: data, encoding: .utf8) else {
             return false
         }
@@ -44,12 +50,19 @@ class Conductor: Conducting {
             throw WMATASwiftError.invalidURL
         }
         
-        let (data, _) = try await session.data(from: url)
+        guard let apiKey = apiKey else {
+            throw WMATASwiftError.invalidAPIKey
+        }
+        
+        var request = URLRequest(url: url)
+        request.setValue(apiKey, forHTTPHeaderField: "api_key")
+        let (data, _) = try await session.data(for: request)
         return try newJSONDecoder().decode(T.self, from: data)
     }
     
     enum WMATASwiftError: Error {
         case invalidURL
         case mapFailure
+        case invalidAPIKey
     }
 }

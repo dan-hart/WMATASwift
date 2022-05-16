@@ -13,6 +13,10 @@ struct Endpoint {
 }
 
 extension Endpoint {
+    var identifier: String {
+        return path.components(separatedBy: CharacterSet.alphanumerics.inverted).joined().lowercased()
+    }
+    
     var url: URL? {
         var components = URLComponents()
         components.scheme = Constants.scheme

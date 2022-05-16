@@ -1,0 +1,23 @@
+{
+  "pins" : [
+    {
+      "identity" : "dhcachekit",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/dan-hart/DHCacheKit",
+      "state" : {
+        "revision" : "61b3498a95a2dea21b7ce020c97daf1d77802694",
+        "version" : "0.0.4"
+      }
+    },
+    {
+      "identity" : "filekit",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/nvzqz/FileKit",
+      "state" : {
+        "revision" : "826d9161b184509f80d85c28cd612d630646de98",
+        "version" : "6.0.0"
+      }
+    }
+  ],
+  "version" : 2
+}
